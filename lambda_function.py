@@ -312,7 +312,7 @@ handlers_err = {
     'RDS-EVENT-0067'
 }
 
-def lambda_handler(event2, context):
+def lambda_handler(event, context):
     for record in event['Records']:
         sns_message = json.loads(record['Sns']['Message'])
         raw_identifier_link = sns_message['Identifier Link']
@@ -350,4 +350,4 @@ def lambda_handler(event2, context):
             print('Hanlde_err event {0}'.format(event_id))
             handler_db_error(snapshot_name, event_id)
         else:
-            print("Event {0} is ignored".format(event_id2))
+            print("Event {0} is ignored".format(event_id))
