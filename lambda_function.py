@@ -99,7 +99,7 @@ def get_first_az():
 def restore_db_instance(az, snapshot_name):
     account_id = get_account_id()
     try:
-    	response = rds.restore_db_instance_from_db_snapshot(
+    	response = rds.restore_db_instance_from_db_snapshot2(
     	    DBInstanceIdentifier=snapshot_name,
     	    DBSnapshotIdentifier=snapshot_name,
     	    DBInstanceClass=DB_INSTANCE_CLASS,
