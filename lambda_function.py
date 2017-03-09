@@ -347,7 +347,7 @@ def lambda_handler(event, context):
                 break
             handlers[event_id](snapshot_name)
         elif event_id in handlers_err:
-            print('Hanlde_err event {0}'.format(event_id))
+            print('Hanlde_err event {0}'.format(event_id2))
             handler_db_error(snapshot_name, event_id)
         else:
             print("Event {0} is ignored".format(event_id))
