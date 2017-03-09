@@ -180,7 +180,7 @@ def handle_db_instance_has_been_restored(snapshot_name):
                 BackupRetentionPeriod=0,
                 MasterUserPassword=dbi_resource_id,
                 ApplyImmediately=True)
-            print('Modify Db instance response: {0}'.format(response2))
+            print('Modify Db instance response: {0}'.format(response))
             publish_event_to_datadog(snapshot_name,
                 'Start modify Db instance "{0}"'.format(snapshot_name),
                 'info')
