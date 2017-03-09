@@ -182,7 +182,6 @@ class TestRDSBackUpVerification(unittest.TestCase):
         gatekeeper_allow_automation_instance_only = patch(
               "lambda_function.gatekeeper_allow_automation_instance_only").start()
         patch('lambda_function.requests.post').start()
-
         self.rds_source = conn_constructor.return_value
 
     def tearDown(self):
