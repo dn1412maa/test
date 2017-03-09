@@ -259,7 +259,7 @@ class TestRDSBackUpVerification(unittest.TestCase):
         lambda_function.requests.post.return_value.content = "==== Publish event ===="
         # Create sns topic
         sns = boto.sns.connect_to_region("us-west-2")
-        sns.create_topic("rds-mysql-db-check")
+        sns.create_topic("hipchat-rds-mysql-db-check")
         # Replace return value of gatekeeper_allow_automation_instance_only function
         lambda_function.gatekeeper_allow_automation_instance_only.return_value = True
         print('==== Start testing with an event id {0} ====').format(self.EVENT_ID)
@@ -268,46 +268,46 @@ class TestRDSBackUpVerification(unittest.TestCase):
 
 class TestRDSBackUpVerification1(TestRDSBackUpVerification):
     # A DB instance is being restored from a DB snapshot.
-    EVENT_ID = 'RDS-EVENT-0043'
+    EVENT_ID = 'rds-event-0043'
 
 
 class TestRDSBackUpVerification2(TestRDSBackUpVerification):
     # The master password for the DB instance has been reset.
-    EVENT_ID = 'RDS-EVENT-0016'
+    EVENT_ID = 'rds-event-0016'
 
 
 class TestRDSBackUpVerification3(TestRDSBackUpVerification):
     # Recovery of the DB instance is complete.
-    EVENT_ID = 'RDS-EVENT-0021'
+    EVENT_ID = 'rds-event-0021'
 
 
 class TestRDSBackUpVerification4(TestRDSBackUpVerification):
     # The DB instance is being deleted.
-    EVENT_ID = 'RDS-EVENT-0003'
+    EVENT_ID = 'rds-event-0003'
 
 
 class TestRDSBackUpVerification5(TestRDSBackUpVerification):
     # The copy of a cross region DB snapshot failed.
-    EVENT_ID = 'RDS-EVENT-0060'
+    EVENT_ID = 'rds-event-0060'
 
 
 class TestRDSBackUpVerification6(TestRDSBackUpVerification):
     # The copy of a cross region DB snapshot failed.
-    EVENT_ID = 'RDS-EVENT-0061'
+    EVENT_ID = 'rds-event-0061'
 
 
 class TestRDSBackUpVerification7(TestRDSBackUpVerification):
     # The DB instance has failed. We recommend that you begin
     # a point-in-time-restore for the DB instance.
-    EVENT_ID = 'RDS-EVENT-0031'
+    EVENT_ID = 'rds-event-0031'
 
 
 class TestRDSBackUpVerification8(TestRDSBackUpVerification):
     # An attempt to reset the master password for the DB instance has failed.
-    EVENT_ID = 'RDS-EVENT-0067'
+    EVENT_ID = 'rds-event-0067'
 
 
 if __name__ == '__main__':
     # A backup of the DB instance is complete.
-    TestRDSBackUpVerification.EVENT_ID = 'RDS-EVENT-0002'
+    TestRDSBackUpVerification.EVENT_ID = 'rds-event-0002'
     unittest.main()
