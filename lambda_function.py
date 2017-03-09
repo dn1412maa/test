@@ -99,7 +99,7 @@ def get_first_az():
 def restore_db_instance(az, snapshot_name):
     account_id = get_account_id()
     try:
-    	response = rds.restore_db_instance_from_db_snapshot2(
+    	response = rds.restore_db_instance_from_db_snapshot(
     	    DBInstanceIdentifier=snapshot_name,
     	    DBSnapshotIdentifier=snapshot_name,
     	    DBInstanceClass=DB_INSTANCE_CLASS,
@@ -180,7 +180,7 @@ def handle_db_instance_has_been_restored(snapshot_name):
                 BackupRetentionPeriod=0,
                 MasterUserPassword=dbi_resource_id,
                 ApplyImmediately=True)
-            print('Modify Db instance response: {0}'.format(response))
+            print('Modify Db instance response: {0}'.format(response2))
             publish_event_to_datadog(snapshot_name,
                 'Start modify Db instance "{0}"'.format(snapshot_name),
                 'info')
