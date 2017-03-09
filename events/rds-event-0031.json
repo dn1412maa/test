@@ -1,0 +1,21 @@
+{
+  "Records": [
+    {
+      "EventVersion": "1",
+      "EventSubscriptionArn": "arn:aws:sns:us-east-1:852318511395:rds-automatic-snapshot-verification:f4a8e143-5576-4907-a3c4-8102a85122a0",
+      "EventSource": "aws:sns",
+      "Sns": {
+        "Type" : "Failure",
+        "MessageId" : "9230840c-8c9f-5f8d-b245-cb9feff6099a",
+        "TopicArn" : "arn:aws:sns:us-west-2:852318511395:rds-automatic-snapshot-verification-instances",
+        "Subject" : "RDS Notification Message",
+        "Message" : "{\"Event Source\":\"db-instance\",\"Event Time\":\"2016-04-21 23:17:32.957\",\"Identifier Link\":\"https://console.aws.amazon.com/rds/home?region=us-west-2#\\nSourceId: test-snapshot-delete-me \",\"Event ID\":\"http://docs.amazonwebservices.com/AmazonRDS/latest/UserGuide/USER_Events.html#RDS-EVENT-0031 \",\"Event Message\":\"The DB instance has failed. We recommend that you begin a point-in-time-restore for the DB instance.\"}",
+        "Timestamp" : "2016-04-21T23:24:25.060Z",
+        "SignatureVersion" : "1",
+        "Signature" : "Od/I4sqXSrS6iTUXD8cWb5qXfa1+EnQgvDXvvzrmoljZw2L7li3H4aR1aa6Pfb4a/evdqKlfk5zbWTM0wqQrxr5tvFc141IYLper7bAxIGGL7F1+V/wCGpv0p2WwinNXGzvLr7Lq0gFVqxGC74ftDLCQ2XGFqLgRTGkLn2dnqLdUwJIzQ1X1n0AGIe+D4CokGkKZaaEOZvDFXVs9yF0kbXHg3aYRfkkUvYRH2jjogjnQwvGvjKCfe0aOQnZd2ZCVzxD+ctYSF7SMFQz+tD0hHNd8nIn7g/NC4LjjbPUSmMenaXcDjhQev1oHh05jAnWLtvcBMJhCF5bmPOqk0rdPXw==",
+        "SigningCertURL" : "https://sns.us-west-2.amazonaws.com/SimpleNotificationService-bb750dd426d95ee9390147a5624348ee.pem",
+        "UnsubscribeURL" : "https://sns.us-west-2.amazonaws.com/?Action=Unsubscribe&SubscriptionArn=arn:aws:sns:us-west-2:852318511395:rds-automatic-snapshot-verification-instances:61533c51-3260-45d5-9b2f-d8ac789ba5d0"
+      }
+    }
+  ]
+}

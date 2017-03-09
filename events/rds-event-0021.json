@@ -1,0 +1,21 @@
+{
+  "Records": [
+    {
+      "EventVersion": "1",
+      "EventSubscriptionArn": "arn:aws:sns:us-east-1:852318511395:rds-automatic-snapshot-verification:f4a8e143-5576-4907-a3c4-8102a85122a0",
+      "EventSource": "aws:sns",
+      "Sns": {
+        "Type" : "Notification",
+        "MessageId" : "23d703c7-b536-5cc2-9131-4c548e5876d7",
+        "TopicArn" : "arn:aws:sns:us-west-2:852318511395:rds-automatic-snapshot-verification",
+        "Subject" : "RDS Notification Message",
+        "Message" : "{\"Event Source\":\"db-snapshot\",\"Event Time\":\"2016-04-21 20:27:52.173\",\"Identifier Link\":\"https://console.aws.amazon.com/rds/home?region=us-west-2#\\nSourceId: test-snapshot-delete-me \",\"Event ID\":\"http://docs.amazonwebservices.com/AmazonRDS/latest/UserGuide/USER_Events.html#RDS-EVENT-0021 \",\"Event Message\":\"Recovery instansce complete test-snapshot-delete-me\"}",
+        "Timestamp" : "2016-04-21T20:33:50.884Z",
+        "SignatureVersion" : "1",
+        "Signature" : "XvFqx2sO7F9HVdBsbEQlFnHfyf1POi2xf472RxvLvCbmVaUynVD5x6spR3uYEbh8yWXIgilFSClZpmgtJM2HGn8nRMQuO2nc8eAZBzaKmgLaggp3JUMzwKlFJoHIZTj/n7RJf5SG0WB1VkI85+rUCmmmzjqr7Y91YqEiJV5JyNE0Dr/+EZBKXULwaeacI6UhKdhUlzZvpoTKlVwGj6FGFFGaCGctwB63jmLZt9WdelyrgBdRMUaxX7bkw9s5hBO301UhpXraqlnruTBcj20crNDV8/zrsHD83VUzdl/T3RrMSz1Oo/Z3k2UFieKYChwaLs3ZGohzweDfHurn93Hu4g==",
+        "SigningCertURL" : "https://sns.us-west-2.amazonaws.com/SimpleNotificationService-bb750dd426d95ee9390147a5624348ee.pem",
+        "UnsubscribeURL" : "https://sns.us-west-2.amazonaws.com/?Action=Unsubscribe&SubscriptionArn=arn:aws:sns:us-west-2:852318511395:rds-automatic-snapshot-verification:d5ceeba1-e9cf-4cf2-817e-f99f22d518e8"
+      }
+    }
+  ]
+}
