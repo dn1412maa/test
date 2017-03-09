@@ -312,7 +312,7 @@ handlers_err = {
     'RDS-EVENT-0067'
 }
 
-def lambda_handler(event, context2):
+def lambda_handler(event2, context):
     for record in event['Records']:
         sns_message = json.loads(record['Sns']['Message'])
         raw_identifier_link = sns_message['Identifier Link']
